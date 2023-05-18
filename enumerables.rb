@@ -23,3 +23,10 @@ def print_spicy_foods(spicy_foods)
   end
 end
 
+def get_spicy_food_by_cuisine(spicy_foods, cuisine)
+  spicy_foods.find { |food| food[:cuisine] == cuisine }
+end
+
+def sort_by_heat(spicy_foods)
+  spicy_foods.sort_by { |food| food[:heat_level] }
+end
