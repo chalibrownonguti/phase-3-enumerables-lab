@@ -36,3 +36,7 @@ def print_spiciest_foods(spicy_foods)
   print_spicy_foods(spiciest)
 end
 
+def average_heat_level(spicy_foods)
+  total_heat_level = spicy_foods.reduce(0) { |sum, food| sum + food[:heat_level] }
+  total_heat_level.to_f / spicy_foods.length
+end
