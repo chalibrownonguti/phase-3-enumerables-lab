@@ -8,3 +8,18 @@ def spicy_foods
   ]
 end
 
+def get_names(spicy_foods)
+  spicy_foods.map { |food| food[:name] }
+end
+
+def spiciest_foods(spicy_foods)
+  spicy_foods.select { |food| food[:heat_level] > 5 }
+end
+
+def print_spicy_foods(spicy_foods)
+  spicy_foods.each do |food|
+    heat_level_emojis = '🌶' * food[:heat_level]
+    puts "#{food[:name]} (#{food[:cuisine]}) | Heat Level: #{heat_level_emojis}"
+  end
+end
+
