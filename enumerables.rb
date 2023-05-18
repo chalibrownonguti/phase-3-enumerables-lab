@@ -30,3 +30,9 @@ end
 def sort_by_heat(spicy_foods)
   spicy_foods.sort_by { |food| food[:heat_level] }
 end
+
+def print_spiciest_foods(spicy_foods)
+  spiciest = spiciest_foods(spicy_foods)
+  print_spicy_foods(spiciest)
+end
+
